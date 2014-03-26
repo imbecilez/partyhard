@@ -1,0 +1,16 @@
+{
+  "name": "partyhard",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular-ui/ui-router": "0.2.10"
+  },
+  "styles": [
+    "styl/index.styl"
+  ],
+  "paths": [
+    "local"
+  ],
+  "local": [
+    "app"
+  ]
+}

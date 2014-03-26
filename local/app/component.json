@@ -1,0 +1,12 @@
+{
+  "name": "app",
+  "dependencies": {
+    "angular-ui/ui-router": "*"
+  },
+  "local": [
+  ],
+  "scripts": [
+    "app.coffee"
+  ],
+  "main": "app.js"
+}

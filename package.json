@@ -1,0 +1,23 @@
+{
+  "name": "partyhard",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "0.2",
+    "clean-css": "2.0",
+    "coffee-script": "1.7",
+    "component": "0.19",
+    "component-builder": "0.10",
+    "component-coffee": "0.1",
+    "component-jade-static": "nl0/component-jade-static#0.1",
+    "component-stylus-plugin": "nl0/component-stylus-plugin#0.2.6",
+    "debug": "0.7",
+    "express": "3.4",
+    "flat": "1.0",
+    "jade": "1.1",
+    "mkdirp": "0.3",
+    "nib": "1.0",
+    "stylus": "0.42",
+    "temp": "0.6",
+    "uglify-js": "2.4"
+  }
+}

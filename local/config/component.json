@@ -1,0 +1,7 @@
+{
+  "name": "config",
+  "description": "external config exposed to the build",
+  "scripts": [
+    "index.js"
+  ]
+}
