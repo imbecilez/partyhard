@@ -23,6 +23,8 @@ app.use express.logger 'dev'
 
 app.use express.static buildDir
 
+app.all 'auth_callback', (req, res) -> res.send ''
+
 app.all '*', buildMiddleware, (req, res) ->
   res.render 'index', require './client-config'
 

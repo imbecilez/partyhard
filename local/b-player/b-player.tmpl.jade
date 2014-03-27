@@ -1,0 +1,16 @@
+.b-player(ng-controller="b-player")
+  h2.b-player__current(ng-init="track = tracks[current]")
+    | Playing now:
+    |  {{ track.artist }} &mdash; {{ track.title }}
+    |  [{{ state() }}] [{{ player.audio.position }}/{{ player.audio.duration }}]
+    |  %{{ player.audio.load_percent }}
+
+  .b-player__track(
+    ng-repeat="track in tracks"
+    ng-class="{\
+      'b-player__track_playing': state() == 'playing' && $index == current,\
+      'b-player__track_paused': state() == 'paused' && $index == current\
+    }"
+    ng-click="play($index)"
+  )
+    | {{ track.artist }} &mdash; {{ track.title }} [{{ track.duration }}]

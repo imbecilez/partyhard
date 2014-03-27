@@ -4,6 +4,9 @@
     "angular-ui/ui-router": "*"
   },
   "local": [
+    "b-player",
+    "config",
+    "vk-api"
   ],
   "scripts": [
     "app.coffee"

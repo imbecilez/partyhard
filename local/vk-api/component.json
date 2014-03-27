@@ -1,0 +1,13 @@
+{
+  "name": "vk-api",
+  "dependencies": {
+    "component/querystring": "1.2.0"
+  },
+  "local": [
+    "errors"
+  ],
+  "scripts": [
+    "vk-api.coffee"
+  ],
+  "main": "vk-api.js"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "errors",
+  "scripts": [
+    "errors.coffee"
+  ],
+  "main": "errors.js"
+}

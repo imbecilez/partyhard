@@ -1,0 +1,10 @@
+{
+  "name": "player",
+  "dependencies": {
+    "nl0/audio5js": "0.1.9"
+  },
+  "scripts": [
+    "player.coffee"
+  ],
+  "main": "player.js"
+}

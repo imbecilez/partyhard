@@ -1,0 +1,13 @@
+{
+  "name": "b-player",
+  "dependencies": {
+  },
+  "local": [
+    "player"
+  ],
+  "scripts": [
+    "b-player.coffee",
+    "b-player.tmpl.jade"
+  ],
+  "main": "b-player.js"
+}

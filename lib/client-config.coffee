@@ -1,5 +1,7 @@
 EXPOSE = [
   'MINIFY'
+  'VK_ID'
+  'VK_CALLBACK'
 ]
 
 
