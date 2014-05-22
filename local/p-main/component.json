@@ -1,0 +1,12 @@
+{
+  "name": "p-main",
+  "local": [
+    "b-navbar",
+    "b-player"
+  ],
+  "scripts": [
+    "p-main.coffee",
+    "p-main.tmpl.jade"
+  ],
+  "main": "p-main.js"
+}

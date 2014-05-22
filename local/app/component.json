@@ -4,8 +4,8 @@
     "angular-ui/ui-router": "*"
   },
   "local": [
-    "b-player",
     "config",
+    "p-main",
     "vk-api"
   ],
   "scripts": [

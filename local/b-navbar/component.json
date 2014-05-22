@@ -1,0 +1,8 @@
+{
+  "name": "b-navbar",
+  "scripts": [
+    "b-navbar.coffee",
+    "b-navbar.tmpl.jade"
+  ],
+  "main": "b-navbar.js"
+}

@@ -4,7 +4,7 @@ CFG = require 'config'
 angular.module module.exports = 'app', [
   require 'angular-ui-router'
   require 'vk-api'
-  require 'b-player'
+  require 'p-main'
 ]
 
 .config ['vk-api.config', (cfg) ->
@@ -16,8 +16,7 @@ angular.module module.exports = 'app', [
   $stateProvider
   .state 'main',
     url: ''
-    template: '<div><h1>Sup!</h1><div ng-include="\'b-player/b-player.tmpl\'"></div></div>'
-    #templateUrl: 'b-player/b-player.tmpl'
+    templateUrl: 'p-main/p-main.tmpl'
     resolve:
       tracks: ['$log', 'vk-api.call', ($l, api) ->
         api 'audio.get'

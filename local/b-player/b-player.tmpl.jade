@@ -1,16 +1,23 @@
 .b-player(ng-controller="b-player")
-  h2.b-player__current(ng-init="track = tracks[current]")
+  h2.b-player__current
     | Playing now:
-    |  {{ track.artist }} &mdash; {{ track.title }}
-    |  [{{ state() }}] [{{ player.audio.position }}/{{ player.audio.duration }}]
-    |  %{{ player.audio.load_percent }}
+    |  {{ player.track.artist }} &mdash; {{ player.track.title }}
+    |  [{{ player.playing }}] [{{ player.position }}/{{ player.duration }}]
+    |  %{{ player.loadPercent }}
+
+  div
+    div(ng-show="playlist.current()")
+      | current: {{ playlist.current().artist }} &mdash; {{ playlist.current().title }} ({{ playlist.idx() }})
+    a.btn.btn-default(ng-click="player.load(playlist.prev().track).play()") prev
+    a.btn.btn-default(ng-click="player.load(playlist.next().track).play()") next
+    a.btn.btn-default(ng-click="playlist.repeat(!playlist.repeat())") repeat: {{ playlist.repeat() }}
 
   .b-player__track(
-    ng-repeat="track in tracks"
+    ng-repeat="track in playlist.tracks()"
     ng-class="{\
-      'b-player__track_playing': state() == 'playing' && $index == current,\
-      'b-player__track_paused': state() == 'paused' && $index == current\
+      'b-player__track_playing': player.playing && player.track == playlist.current,\
+      'b-player__track_paused': !player.playing && player.track == playlist.current\
     }"
-    ng-click="play($index)"
+    ng-click="player.load(playlist.select($index).track).play()"
   )
     | {{ track.artist }} &mdash; {{ track.title }} [{{ track.duration }}]
